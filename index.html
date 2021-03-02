@@ -27,7 +27,7 @@
     <!-- In this block used bold, italic, marked, deleted, inserted, subscript, superscript -->
     <p><b>Sed mollis</b>, eros et ultrices tempus, <strong> mauris ipsum </strong> <em> aliquam libero</em>, non adipiscing <i> dolor urna</i> a orci. <mark> Vestibulum eu odio </mark>. Phasellus nec <small>sem in justo</small> pellentesque facilisis. <del> Nunc interdum</del> lacus sit amet orci.
 
-    <ins>Duis</ins> arcu tortor, <sub> suscipit eget</sub>, imperdiet nec, <sup> imperdiet iaculis, ipsum</sup>. Proin faucibus arcu quis ante. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Curabitur a felis in nunc fringilla tristique.
+    <ins>inserted text</ins> arcu tortor, <sub> subscript text</sub>, imperdiet nec, <sup> superscript text</sup>. Proin faucibus arcu quis ante. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Curabitur a felis in nunc fringilla tristique.
 
     Praesent ac massa at ligula laoreet iaculis. Etiam vitae tortor. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Nullam cursus lacinia erat.</p>
     <h2>Second heading</h2>
@@ -57,7 +57,15 @@
         Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Proin faucibus arcu quis ante. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Curabitur a felis in nunc fringilla tristique.
 
         Praesent ac massa at ligula laoreet iaculis. Etiam vitae tortor. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Nullam cursus lacinia erat.</p>
-        <a href="media.html">read more...</a>
+        <!-- this is standart link settings with absolute path -->
+        <a href="https://sass-lang.com/documentation/style-rules" target="_self">read more...</a>
+        <!-- this one opens it new tab with relative path -->
+        <a href="references.html" target="_blank">or more...</a>
+        <!-- this opens document in parent frame -->
+        <a href="graphics.html" target="_parent">or more...</a>
+        <!-- open a document in full body of the window -->
+        <a href="api.html" target="_top">or much more...</a>
+
       </div>
 
     </div>
@@ -67,6 +75,143 @@
     Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Proin faucibus arcu quis ante. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Curabitur a felis in nunc fringilla tristique.
 
     Praesent ac massa at ligula laoreet iaculis. Etiam vitae tortor. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Nullam cursus lacinia erat.</p>
+    <div class="rows">
+      <div class="group_for_three">
+        <img src="https://picsum.photos/id/13/400/300" alt="ocean and things" usemap="#first_one">
+        <map name="first_one">
+          <area shape="rect" coords="0, 0, 160, 300" href="api.html" alt="half image area first">
+          <area shape="rect" coords="160, 0, 400, 300," href="api.html" alt="half image area second">
+        </map>
+      </div>
+      <div class="group_for_three">
+        <img src="https://picsum.photos/id/128/400/300" alt="lake and mountains" usemap="#second_one">
+        <map name="second_one">
+          <area shape="circle" coords="40, 50, 33" href="forms.html" alt="mountains circle">
+          <area shape="circle" coords="200, 140, 33" href="forms.html" alt="grass circle">
+        </map>
+      </div>
+      <div class="group_for_three">
+        <img src="https://picsum.photos/id/129/400/300" alt="couple in desert" usemap="#third_one">
+        <map name="third_one">
+          <area shape="poly" coords="100,21,141,6,164,50,164,112,151,160,100,219,45,245,18,242,37,212,40,149,63,51,78,37" href="examples.html" alt="crousaint shape">
+        </map>
+      </div>
+
+    </div>
+    <div class="picture_in">
+      <picture>
+        <source media="(max-width: 768px)" srcset="https://picsum.photos/id/151/500/300">
+        <source media="(max-width: 998px)" srcset="https://picsum.photos/id/151/700/400">
+        <img src="https://picsum.photos/id/151/966/500" alt="nature overview">
+      </picture>
+    </div>
   </main>
+  <div class="tables">
+    <table>
+      <caption>This is caption</caption>
+      <tr>
+        <th>First header</th>
+        <th>Second header</th>
+        <th colspan="2">Third header</th>
+      </tr>
+      <tr>
+        <td>First cell</td>
+        <td>Second cell</td>
+        <td>Third cell</td>
+        <td>Fourth cell</td>
+      </tr>
+      <tr>
+        <td>Second column cell</td>
+        <td>Second column cell</td>
+        <td rowspan="2">Second column cell</td>
+      </tr>
+      <tr>
+        <td>Third column cell</td>
+        <td>Third column cell</td>
+        <td>Third column cell</td>
+        <td>Third column cell</td>
+      </tr>
+    </table>
+  </div>
+  <div class="lists">
+    <ul>
+      <li>Lorem ipsum dolor</li>
+      <li>Lorem ipsum dolor</li>
+      <li>Lorem ipsum dolor</li>
+      <li>Lorem ipsum dolor</li>
+      <li>Lorem ipsum dolor</li>
+    </ul>
+    <ol type="1" start="50">
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      <li>Debitis, quae exercitationem impedit saepe eos.</li>
+      <li>Pariatur, eveniet animi mollitia soluta minima.</li>
+      <li>Rem sint recusandae perferendis illum numquam.</li>
+    </ol>
+    <ol type="a">
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      <li>Debitis, quae exercitationem impedit saepe eos.</li>
+      <li>Pariatur, eveniet animi mollitia soluta minima.</li>
+      <li>Rem sint recusandae perferendis illum numquam.</li>
+    </ol>
+    <ol type="A">
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      <li>Debitis, quae exercitationem impedit saepe eos.</li>
+      <li>Pariatur, eveniet animi mollitia soluta minima.</li>
+      <li>Rem sint recusandae perferendis illum numquam.</li>
+    </ol>
+    <ol type="i">
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      <li>Debitis, quae exercitationem impedit saepe eos.</li>
+      <li>Pariatur, eveniet animi mollitia soluta minima.</li>
+      <li>Rem sint recusandae perferendis illum numquam.</li>
+    </ol>
+    <ol type="I">
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      <li>Debitis, quae exercitationem impedit saepe eos.</li>
+      <li>Pariatur, eveniet animi mollitia soluta minima.</li>
+      <li>Rem sint recusandae perferendis illum numquam.</li>
+    </ol>
+    <dl>
+      <dt>Lorem ipsum dolor sit.</dt>
+      <dd>Ad aliquam magni veniam dolorum.</dd>
+      <dt>Sed, dolorem, neque. Cumque!</dt>
+      <dd>Ratione hic deleniti aspernatur ipsam.</dd>
+      <dt>Ea, eum excepturi consequuntur!</dt>
+      <dd>Lorem ipsum dolor sit amet.</dd>
+    </dl>
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      <li>Earum asperiores vero reiciendis. Consequatur, iure.</li>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        <li>Repellat, laudantium fuga suscipit eum maiores voluptate possimus!</li>
+        <li>Adipisci dolores officia eligendi quibusdam labore vel? Earum.</li>
+      </ul>
+      <li>Dolorum possimus esse, vel porro provident.</li>
+      <li>Architecto harum voluptate accusamus adipisci ea.</li>
+    </ul>
+  </div>
+  <div class="codes_some">
+    <code>
+    x = 5;
+    y = 6;
+    z = x + y;
+    </code>
+    <!-- used to display bunch of programming code -->
+    <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+    <!-- used to explain that this command is keyboard input -->
+    <p><samp>File not found.<br>Press F1 to continue</samp></p>
+    <!-- sample output from computer program -->
+    <pre>
+      <code>
+      x = 5;
+      y = 6;
+      z = x + y;
+      </code>
+    </pre>
+    <!-- answer to getting formation right -->
+    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+    <!-- marks up variables in italic -->
+  </div>
 </body>
 </html>

@@ -12,8 +12,6 @@
     <nav>
       <ul class="nav navbar">
         <li><a href="index.html">home</a></li>
-        <li><a href="api.html">api</a></li>
-        <li><a href="examples.html">examples</a></li>
         <li><a href="forms.html">forms</a></li>
         <li><a href="graphics.html">graphics</a></li>
         <li><a href="media.html">media</a></li>
@@ -21,5 +19,82 @@
       </ul>
     </nav>
   </header>
+  <main>
+    <section class="containers contactForm">
+      <h1>Contact Us</h1>
+      <form class="" action="send.php" method="post" target="_blank" novalidate oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <fieldset>
+          <legend>Personal data</legend>
+          <!-- all usual targets method get also exist -->
+          <label for="fname">First Name:</label>
+          <input type="text" name="fname" value="Oleg" autocomplete="on" size="3" autofocus>
+          <label for="lname">Last Name:</label>
+          <input type="text" name="lname" value="Tseiko" autocomplete="on" maxlength="15">
+          <label for="mail">Email:</label>
+          <input type="email" name="mail">
+          <label for="numberTel">Phone number:</label>
+          <input type="number" name="numberTel" step="3">
+          <label for="dates">Birth date</label>
+          <input type="date" name="dates">
+          <textarea name="message" rows="5" cols="20">Give us your opinion!</textarea>
+          <label for="city">Choose your city:</label>
+          <select id="city" name="city">
+            <option value="lutsk" selected>Lutsk</option>
+            <option value="Kiev">Kiev</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Kharkiv">Kharkiv</option>
+          </select>
+          <select id="city" name="city" size="3" multiple>
+            <option value="lutsk" selected>Lutsk</option>
+            <option value="Kiev">Kiev</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Kharkiv">Kharkiv</option>
+          </select>
+          <input type="range" id="a" value="50" name="a" min="50" max="500">
+          <input type="range" id="b" value="50" name="b" min="100" max="500">
+          <output name="result" for="a b"></output>
+          <label>Gender:</label>
+          <div class="inline">
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="other" id="other">
+            <label for="other">Other</label>
+          </div>
+          <div class="inline">
+            <label for="ToS">TOS</label>
+            <input type="checkbox" id="ToS" name="tos" value="ToS">
+            <label for="license">License agreement</label>
+            <input type="checkbox" id="license" name="license" value="License">
+          </div>
+          <input type="tel" id="phone" name="phone"
+  placeholder="123-45-678"
+  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+          <input type="url" name="address" value="URL" disabled>
+          <input type="week" name="what-week">
+          <input type="time" name="what-time">
+          <input type="color" name="pick-color">
+          <input type="datetime-local" name="pickdatatime">
+          <input type="file" name="choose file">
+          <input type="hidden" name="it's-hidden">
+          <input type="image" name="download-image" height="20px" width="20px">
+          <input type="month" name="pick-month">
+          <input type="password" name="chech-pass" value="password" readonly>
+          <input type="search" name="search" value="search">
+          <input list="browsers">
+          <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+          </datalist>
+          <input type="submit" value="submit" formenctype="multipart/form-data" formnovalidate="formnovalidate">
+          <input type="reset" value="reset">
+        </fieldset>
+      </form>
+    </section>
+  </main>
 </body>
 </html>

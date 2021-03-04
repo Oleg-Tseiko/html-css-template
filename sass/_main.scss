@@ -20,3 +20,9 @@ a {
 a:hover, a:focus {
   color: $white-color;
 }
+dialog {
+      position: static;
+}
+figure {
+  margin: 0;
+}
